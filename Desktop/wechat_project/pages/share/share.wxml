@@ -1,0 +1,46 @@
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="3200">
+       <swiper-item >
+                <image src='/images/offer.jpg'>
+                </image>
+       </swiper-item>
+       <swiper-item>
+           <image src='/images/niceday.jpg'>
+              </image>
+      </swiper-item>
+       <swiper-item>
+              <image src='/images/person.jpg'>
+              </image>
+      </swiper-item>
+
+    </swiper>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+  <view class="mobi_title">
+    <text class="mobi_icon"></text>
+    <text>校友内推</text>
+  </view>
+  <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.id">
+    <view class="list" data-id="{{list.id}}">
+      <view class="list-img">
+        <image class="video-img" mode="scaleToFill" src="{{list.image}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title"><text>{{list.title}}</text></view>
+        <view class="list-tag"><view class="state">{{list.state}}</view><view class="join"><text class="list-num">{{list.num}}</text>人报名</view></view>
+        <view class="list-info"><text>{{list.address}}</text>|<text>{{list.time}}</text></view>
+      </view> 
+    </view>
+  </block>
+
+

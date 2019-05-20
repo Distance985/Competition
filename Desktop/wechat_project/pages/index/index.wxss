@@ -1,0 +1,36 @@
+@import "post-template/post-item-template"; 
+/* 注意与wxml模板引用的区别，没有src，有@ */
+swiper
+{
+  width:100%; 
+  height: 570rpx;
+}
+swiper image
+{
+  width:100%;
+  height: 570rpx;
+}
+.category-panel{
+    height:90px;
+    width:100%;
+    display:flex;
+    color:#666666;
+    flex-direction:row;
+    font-size:11px;
+    justify-content: space-around;
+}
+.category-item{
+    display:flex;
+    width:60px;
+    text-align: center;
+    flex-direction:column;
+}
+.category-item-image{
+    width:36px;
+    height:36px;
+    overflow:unset;
+    padding:15px 12px 0 12px
+}
+.category-item-text{
+    padding:10px 0;
+}

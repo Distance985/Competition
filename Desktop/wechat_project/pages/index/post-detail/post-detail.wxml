@@ -1,0 +1,25 @@
+<view class='container'>
+     <image src='{{postData.img.post_image}}' class='main-image'></image>
+     <!-- <image src='/images/music/music-start.png' class='audio'></image>
+     <view class='author'>
+        <image src='{{postData.img.post_author}}' class='author-image'></image>
+        <text class='author-name'>{{postData.authorname}}</text>
+        <text class='author-text'>发表于</text>
+        <text class='author-date'>{{postData.datetime}}</text>
+     </view> -->
+     <view class='title'>
+         {{postData.title}}
+     </view>
+     <view>
+        <view class='horizon'></view>
+        <view>
+          <image src='/images/share.png' class='shareimg' ></image>
+          <image wx:if="{{collected}}" catchtap='onCollectionTap' src='/images/collection.png' class='collectionimg'></image>
+          <!-- collected未设置前默认为false -->
+          <image wx:else src='/images/collection-anti.png' class='collectionimg' ></image>
+        </view>
+     </view>
+     <text class='detail' decode='true'>
+        {{postData.detail}}
+     </text>
+</view>

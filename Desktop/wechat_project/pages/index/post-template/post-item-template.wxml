@@ -1,0 +1,13 @@
+<template name="post-item">   <!-- 将代码放入模板中，取一个名字用于区分和引用 -->
+
+      <!-- <text class='post-date'>{{date}}</text> -->
+      <text class='post-title'>{{title}}</text>
+      <image src='{{img.post_image}}' class='post-image'></image>
+      <text class='post-content' decode='true'>  {{conent}}</text>
+     <view class='post-like' >
+        <image src='/images/chat.png' class='post-result-image'></image>
+        <text class='distance'>{{result_zan}}</text>
+        <image src='/images/chat1.png' class='post-result-image'></image>
+        <text >{{result_shuo}}</text>
+</view>
+</template>

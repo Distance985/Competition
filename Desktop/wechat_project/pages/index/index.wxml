@@ -1,0 +1,55 @@
+<import src="post-template/post-item-template.wxml" />   <!-- 导入模板，相对路径和绝对路径都是可以的 -->
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="3200">
+       <swiper-item >
+                <image src='/images/xtu.jpg'>
+                </image>
+       </swiper-item>
+        <swiper-item>
+               <image src='/images/ok.jpg'>
+               </image>
+        </swiper-item>
+       <swiper-item>
+           <image src='/images/fengliu.jpg'>
+              </image>
+      </swiper-item>
+       <swiper-item>
+              <image src='/images/lib.jpg'>
+              </image>
+      </swiper-item>
+       <swiper-item>
+           <image src='/images/book.jpg'>  
+             
+              </image>
+      </swiper-item>
+    </swiper>
+</view>
+
+<view class="category-panel">
+        <view class="category-item">
+            <image class="category-item-image" src="/images/universityActive.png" />
+            <text class="category-item-text">校园主页</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="/images/task-click.png" />
+            <text class="category-item-text">校友日程</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="/images/ICON_MotherClassHL.png" />
+            <text class="category-item-text">毕业那年</text>
+        </view>
+        <view class="category-item">
+            <image class="category-item-image" src="/images/notify.png" />
+            <text class="category-item-text">我的消息</text>
+        </view>
+</view>
+
+<view wx:for="{{post_key}}" wx:for-item="item" class='post-container'>
+  <view catchtap='Post_Ontap' data-postId='{{item.postId}}'>                         
+  <!-- 为什么在此处要这样子呢？使用一个容器将其包裹起来，在这个容器里启动事件监听函数
+       关于这个id的理解：首先点击以后，触发事件后post_Id会得到对应页面的id，然后传递到反应函数中
+   -->
+      <template is="post-item" data="{{...item}}"/>    <!-- 引用模板内容，注意格式,其实就相当于C语言中头文件，将代码复制到了此处 -->
+                                                       <!-- 去掉item加...就可以代替item的效果 -->
+  </view>
+</view>
